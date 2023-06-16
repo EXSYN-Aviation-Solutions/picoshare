@@ -1,12 +1,10 @@
-access-key-id: ${LITESTREAM_ACCESS_KEY_ID}
-secret-access-key: ${LITESTREAM_SECRET_ACCESS_KEY}
 dbs:
   - path: ${DB_PATH}
     replicas:
       - type: abs
-        account-name: ${LITESTREAM_AZURE_ACCOUNTNAME}
-        account-key: ${LITESTEAM_AZURE_KEY}
-        bucket: ${LITESTREAM_AZURE_CONTAINERNMAME}
+        account-name: ${LITESTREAM_ACCESS_KEY_ID}
+        account-key: ${LITESTREAM_SECRET_ACCESS_KEY}
+        bucket: ${LITESTREAM_BUCKET}
         path: db
         force-path-style: true
         retention: 72h
