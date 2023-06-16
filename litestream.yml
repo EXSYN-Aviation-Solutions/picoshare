@@ -3,10 +3,11 @@ secret-access-key: ${LITESTREAM_SECRET_ACCESS_KEY}
 dbs:
   - path: ${DB_PATH}
     replicas:
-      - type: s3
-        bucket: ${LITESTREAM_BUCKET}
+      - type: abs
+        account-name: ${LITESTREAM_AZURE_ACCOUNTNAME}
+        account-key: ${LITESTEAM_AZURE_KEY}
+        bucket: ${LITESTREAM_AZURE_CONTAINERNMAME}
         path: db
-        endpoint: ${LITESTREAM_ENDPOINT}
         force-path-style: true
         retention: 72h
         snapshot-interval: 24h
